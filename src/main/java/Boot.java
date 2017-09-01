@@ -3,10 +3,7 @@ import com.google.inject.Guice;
 import com.typesafe.config.Config;
 import com.typesafe.scalalogging.LazyLogging;
 import com.typesafe.scalalogging.Logger;
-import scutum.scanner.endpointprotection.contracts.IDataScanner;
-
-import java.util.List;
-import java.util.stream.Collectors;
+import scutum.core.contracts.endpointprotection.IDataScanner;
 
 // todo fix logger - should not be infrastructure ?
 // todo check @inject annotation

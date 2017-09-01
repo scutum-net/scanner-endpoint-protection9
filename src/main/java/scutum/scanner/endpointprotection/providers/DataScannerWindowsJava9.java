@@ -1,7 +1,7 @@
 package scutum.scanner.endpointprotection.providers;
 
-import scutum.scanner.endpointprotection.contracts.IDataScanner;
-import scutum.scanner.endpointprotection.contracts.MachineData;
+import scutum.core.contracts.endpointprotection.IDataScanner;
+import scutum.core.contracts.endpointprotection.MachineData;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -26,8 +26,8 @@ public class DataScannerWindowsJava9 implements IDataScanner {
         //        });
 
         List<ProcessHandle> processes = ProcessHandle.allProcesses().collect(Collectors.toList());
-        List<ProcessHandle.Info> infos = processes.stream().map(x->x.info()).collect(Collectors.toList());
-        processes.stream().map(x->x.children());
+        List<ProcessHandle.Info> infos = processes.stream().map(ProcessHandle::info).collect(Collectors.toList());
+        //processes.stream().map(x->x.children());
         //.filter(ph -> ph.info().command().isPresent()).forEach(p -> System.out.println(p.pid() + " " + p.info().commandLine()));
         System.out.print("Enter something:");
         String input = System.console().readLine();

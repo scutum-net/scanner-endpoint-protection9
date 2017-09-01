@@ -1,5 +1,4 @@
 import com.google.inject.AbstractModule;
-import com.google.inject.Inject;
 import com.google.inject.Provides;
 import com.google.inject.Singleton;
 import com.typesafe.config.Config;
@@ -7,7 +6,7 @@ import com.typesafe.config.ConfigFactory;
 import com.typesafe.scalalogging.LazyLogging;
 import com.typesafe.scalalogging.Logger;
 import net.codingwell.scalaguice.ScalaModule;
-import scutum.scanner.endpointprotection.contracts.IDataScanner;
+import scutum.core.contracts.endpointprotection.IDataScanner;
 import scutum.scanner.endpointprotection.providers.DataScannerWindows;
 
 import java.io.File;
